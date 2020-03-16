@@ -1,27 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { product } from "../model/product";
-import { data } from '../model/mockData';
-import { ProductListComponent } from '../product-list/product-list.component';
-
+import { product } from "../model/product"
 @Component({
-  selector: 'app-product-manager',
-  templateUrl: './product-manager.component.html',
-  styleUrls: ['./product-manager.component.css']
+  selector: 'app-product',
+  templateUrl: './product.component.html',
+  styleUrls: ['./product.component.css']
 })
-export class ProductManagerComponent implements OnInit {
-  PrList= new ProductListComponent();
-  constructor() {
-    
-  }
- 
+export class ProductComponent implements OnInit {
+
+  constructor() { }
+
   ngOnInit(): void {
-  }
-
-  // selected:product;
-  
-  products=data;
-
-  removeItem(id) {
-    return this.products = this.products.filter(p => p.id != id);
   }
 }
